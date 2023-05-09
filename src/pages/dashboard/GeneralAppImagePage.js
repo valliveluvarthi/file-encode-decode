@@ -118,6 +118,7 @@ import { DataGrid } from '@mui/x-data-grid';
 import { DataGridPro } from '@mui/x-data-grid-pro';
 import { useNavigate } from 'react-router-dom';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ReactLoading from "react-loading";
 
 // components
 import { useSettingsContext } from '../../components/settings';
@@ -135,7 +136,7 @@ export default function GeneralAppImagePage() {
     const dispatch = useDispatch();
     const { themeStretch } = useSettingsContext();
     const { docTypeList } = useSelector((state) => state.docList);
-    const { base64str, ext, alertMessage } = useSelector((state) => state.uploadFile);
+    const { base64str, ext, alertMessage, isLoading } = useSelector((state) => state.uploadFile);
     const [selectedParams, setSelectedParams] = useState(null);
     const [encript, setEncript] = useState(false);
     const [encryptedImageString, setEncryptedImageString] = useState("");
@@ -367,15 +368,17 @@ export default function GeneralAppImagePage() {
     };
     const encodeImageFileAsURL = (element) => {
         console.log(element.target.files);
-        setSelectedFile(element.target.files[0]);
-        const formData = new FormData();
-        formData.append("name", element.target.files[0].name);
-        formData.append("file", element.target.files[0]);
-        formData.append("type", element.target.files[0].type);
-        const extension = element.target.files[0].type.split('/');
-        formData.append("extension", extension[extension.length - 1]);
-        formData.append("destination", "E:/shap-doc");
-        dispatch(uploadFile(formData));
+        if (element.target.files.length > 0) {
+            setSelectedFile(element.target.files[0]);
+            const formData = new FormData();
+            formData.append("name", element.target.files[0].name);
+            formData.append("file", element.target.files[0]);
+            formData.append("type", element.target.files[0].type);
+            const extension = element.target.files[0].type.split('/');
+            formData.append("extension", extension[extension.length - 1]);
+            formData.append("destination", "E:/shap-doc");
+            dispatch(uploadFile(formData));
+        }
 
 
         // const file = element.target.files[0];
@@ -460,6 +463,7 @@ export default function GeneralAppImagePage() {
                             <Box sx={{ mt: 1 }}>
                                 <Stack flexDirection="row" alignItems="center">
                                     <input type="file" onChange={encodeImageFileAsURL} />
+                                    {isLoading && <ReactLoading type="spinningBubbles" color="#000000" width = "18px" height="25px"/>}
                                     {/* <Box>
                             <Button onClick={() => Base64ToImage(window.atob(encryptedImageString), (img) => {
                                 document.getElementById('main').appendChild(img);
@@ -468,9 +472,9 @@ export default function GeneralAppImagePage() {
                             }>Click Download encoded JSON</Button>
                             <Box id="main" class="preview" sx={{ mt: 1 }} />
                         </Box> */}
-                                    <Box>
-                                        <Button onClick={Base64ToImage}>Click to Download encoded JSON</Button>
-                                        <Box id="main" className="preview" sx={{ mt: 1 }} />
+                                    <Box sx={{ml:8}}>
+                                        <Button onClick={Base64ToImage} disabled={(base64str !== decodebase64)} >Click to Download encoded JSON</Button>
+                                        {/* <Box id="main" className="preview" sx={{ mt: 1 }} /> */}
                                     </Box>
                                 </Stack>
                                 {/* <Box sx={{ mt: 1, width: "100%", display: "flex", flexWrap: "wrap", alignItems: "center" }}>
