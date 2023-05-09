@@ -1,0 +1,13 @@
+{
+  "users": [
+    { "id": 1, "username": "moaz@gmail.com", "password": "Eagleservice@22" },
+    { "id": 2, "username": "rhea@gmail.com", "password": "Eagleservice@22" },
+    { "id": 3, "username": "ben@gmail.com", "password": "Eagleservice@22" },
+    { "id": 4, "username": "tim@gmail.com", "password": "Eagleservice@22" }
+  ],
+  "case_viewers": [
+    { "id": 1, "eventNumber": "ABCD1234", "vehicleNumber": "DCBA1234" },
+    { "id": 2, "eventNumber": "EFGH1234", "vehicleNumber": "HGFE1234" },
+    { "id": 3, "eventNumber": "IJKL1234", "vehicleNumber": "LKJI1234" }
+  ]
+}
