@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2023 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="29">
+	<resources>
+		<datasources>
+			<datasource name="Rashi6_-_Dev_-_Shapoper">
+				<properties JDBCDriver="sun.jdbc.odbc.JdbcOdbcDriver" JDBCDatabaseURL="jdbc:odbc:Rashi6 - Dev - Shapoper" DBUser="SYSPROGRESS" DBPassword="sysprogress" DBDataSource="Rashi6 - Dev - Shapoper" DBCatalog="shapoper" OLEDBOptions="DB=shapoper;DSN=Rashi6 - Dev - Shapoper;HOST=10.167.1.40;Port=57102"/>
+				<database_connection vendor="progress" import_kind="ODBC" version="11.6" ConnectionString="DSN=Rashi6 - Dev - Shapoper;HOST=10.167.1.40;PORT=57102;DB=shapoper;UID=SYSPROGRESS;PWD=sysprogress" name="Rashi6_-_Dev_-_Shapoper" path="Rashi6_-_Dev_-_Shapoper">
+					<properties>
+						<property name="Database Kind" value="Progress"/>
+						<property name="Import Kind" value="ODBC"/>
+						<property name="Root Object" value="shapoper"/>
+						<property name="Connect Script"/>
+						<property name="FileDsn"/>
+						<property name="Dsn" value="Rashi6 - Dev - Shapoper"/>
+						<property name="Driver"/>
+						<property name="Trusted_Connection"/>
+						<property name="App"/>
+						<property name="Server"/>
+						<property name="Database"/>
+						<property name="Regional"/>
+						<property name="Languages"/>
+						<property name="Wsid"/>
+						<property name="Uid" value="SYSPROGRESS"/>
+						<property name="Pwd" value="PXUaBG-TA0ATG-CMMza1"/>
+						<property name="Port" value="57102"/>
+						<property name="Option"/>
+						<property name="Stmt"/>
+					</properties>
+				</database_connection>
+			</datasource>
+		</datasources>
+	</resources>
+	<component name="defaultmap" uid="1" editable="1">
+		<properties SelectedLanguage="builtin"/>
+		<structure>
+			<children>
+				<component name="constant" library="core" uid="57" kind="2">
+					<targets>
+						<datapoint pos="0" key="442"/>
+					</targets>
+					<view ltx="588" lty="-56" rbx="686" rby="-40"/>
+					<data>
+						<constant value="SAMSHABWI" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="58" kind="2">
+					<targets>
+						<datapoint pos="0" key="440"/>
+					</targets>
+					<view ltx="588" lty="-40" rbx="649" rby="-24"/>
+					<data>
+						<constant value="false" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="64" kind="2">
+					<targets>
+						<datapoint/>
+					</targets>
+					<view ltx="429" lty="292" rbx="466" rby="308"/>
+					<data>
+						<constant value="0" datatype="decimal"/>
+					</data>
+				</component>
+				<component name="input4" library="core" uid="79" kind="6">
+					<sources>
+						<datapoint pos="0" key="496"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="497"/>
+					</targets>
+					<view ltx="462" lty="135" rbx="540" rby="171"/>
+					<data>
+						<input datatype="string"/>
+						<parameter usageKind="input" name="input4" optional="1"/>
+					</data>
+				</component>
+				<component name="input3" library="core" uid="76" kind="6">
+					<sources>
+						<datapoint pos="0" key="490"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="491"/>
+					</targets>
+					<view ltx="379" lty="38" rbx="457" rby="74"/>
+					<data>
+						<input datatype="string"/>
+						<parameter usageKind="input" name="input3" optional="1"/>
+					</data>
+				</component>
+				<component name="equal" library="core" uid="82" kind="5">
+					<sources>
+						<datapoint pos="0" key="498"/>
+						<datapoint pos="1" key="499"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="500"/>
+					</targets>
+					<view ltx="575" lty="118" rbx="626" rby="170"/>
+				</component>
+				<component name="equal" library="core" uid="78" kind="5">
+					<sources>
+						<datapoint pos="0" key="492"/>
+						<datapoint pos="1" key="493"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="494"/>
+					</targets>
+					<view ltx="477" lty="-23" rbx="528" rby="29"/>
+				</component>
+				<component name="constant" library="core" uid="75" kind="2">
+					<targets>
+						<datapoint pos="0" key="485"/>
+					</targets>
+					<view ltx="395" lty="98" rbx="435" rby="114"/>
+					<data>
+						<constant datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="59" kind="2">
+					<targets>
+						<datapoint pos="0" key="438"/>
+					</targets>
+					<view ltx="588" lty="-23" rbx="641" rby="-7"/>
+					<data>
+						<constant value="2.0" datatype="string"/>
+					</data>
+				</component>
+				<component name="value-map" library="core" uid="84" kind="23">
+					<sources>
+						<datapoint pos="0" key="516"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="515"/>
+					</targets>
+					<view ltx="563" lty="396" rbx="637" rby="432"/>
+					<data>
+						<valuemap>
+							<valuemapTable>
+								<entry from="0" to="true"/>
+								<entry from="1" to="false"/>
+							</valuemapTable>
+							<input name="input" type="int"/>
+							<result name="result" type="string"/>
+						</valuemap>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="61" kind="2">
+					<targets>
+						<datapoint/>
+					</targets>
+					<view ltx="588" lty="11" rbx="640" rby="27"/>
+					<data>
+						<constant value="no" datatype="string"/>
+					</data>
+				</component>
+				<component name="Notify-party2" library="core" uid="80" kind="3">
+					<sources>
+						<datapoint pos="0" key="501"/>
+						<datapoint pos="1" key="502"/>
+					</sources>
+					<targets>
+						<datapoint/>
+						<datapoint pos="1" key="544"/>
+					</targets>
+					<view ltx="635" lty="170" rbx="735" rby="222"/>
+				</component>
+				<component name="Notify-party1" library="core" uid="74" kind="3">
+					<sources>
+						<datapoint pos="0" key="487"/>
+						<datapoint pos="1" key="488"/>
+					</sources>
+					<targets>
+						<datapoint/>
+						<datapoint pos="1" key="547"/>
+					</targets>
+					<view ltx="562" lty="63" rbx="662" rby="115"/>
+				</component>
+				<component name="constant" library="core" uid="60" kind="2">
+					<targets>
+						<datapoint pos="0" key="441"/>
+					</targets>
+					<view ltx="588" lty="-6" rbx="662" rby="10"/>
+					<data>
+						<constant value="MERGE" datatype="string"/>
+					</data>
+				</component>
+				<component name="value-map" library="core" uid="83" kind="23">
+					<sources>
+						<datapoint pos="0" key="513"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="514"/>
+					</targets>
+					<view ltx="563" lty="256" rbx="637" rby="292"/>
+					<data>
+						<valuemap>
+							<valuemapTable>
+								<entry from="1" to="true"/>
+								<entry from="0" to="false"/>
+							</valuemapTable>
+							<input name="input" type="int"/>
+							<result name="result" type="string"/>
+						</valuemap>
+					</data>
+				</component>
+				<component name="NativeOrganization" library="xml" uid="62" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="798" lty="-56" rbx="1129" rby="718"/>
+					<data>
+						<root scrollposition="2735">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.cargowise.com/Schemas/Native/2011/11"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="2" expanded="1">
+								<entry name="document" ns="2" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="Native" ns="1" expanded="1">
+										<entry name="version" type="attribute" inpkey="459"/>
+										<entry name="Header" ns="1" expanded="1">
+											<entry name="OwnerCode" ns="1" inpkey="460"/>
+											<entry name="EnableCodeMapping" ns="1" inpkey="461"/>
+										</entry>
+										<entry name="Body" ns="1" expanded="1">
+											<entry name="*">
+												<selections>
+													<qname QNameAsString="{http://www.cargowise.com/Schemas/Native/2011/11}Organization"/>
+												</selections>
+											</entry>
+											<entry name="Organization" ns="1" inpkey="532" expanded="1">
+												<entry name="version" type="attribute" inpkey="533"/>
+												<entry name="OrgHeader" ns="1" expanded="1">
+													<entry name="Action" type="attribute" inpkey="534"/>
+													<entry name="Code" ns="1" inpkey="535"/>
+													<entry name="OrgContactCollection" ns="1" expanded="1">
+														<entry name="OrgContact" ns="1" expanded="1">
+															<entry name="Action" type="attribute" inpkey="549"/>
+															<entry name="ContactName" ns="1" inpkey="548"/>
+														</entry>
+													</entry>
+													<entry name="OrgAddressCollection" ns="1">
+														<entry name="OrgAddress" ns="1">
+															<entry name="OrgAddressCapabilityCollection" ns="1">
+																<entry name="OrgAddressCapability" ns="1">
+																	<entry name="AddressType" ns="1" inpkey="536"/>
+																</entry>
+															</entry>
+														</entry>
+													</entry>
+													<entry name="OrgSupplierBuyerLink_SupplierCollection" ns="1" expanded="1">
+														<entry name="OrgSupplierBuyerLink_Supplier" ns="1" expanded="1">
+															<entry name="NotifyPartyContact" ns="1">
+																<entry name="Action" type="attribute" inpkey="537"/>
+																<entry name="ContactName" ns="1" inpkey="538"/>
+																<entry name="Notify-party1" ns="1" inpkey="545"/>
+																<entry name="Notify-party2" ns="1" inpkey="546"/>
+															</entry>
+														</entry>
+													</entry>
+													<entry name="OrgCompanyDataCollection" ns="1" expanded="1">
+														<entry name="OrgCompanyData" ns="1" expanded="1">
+															<entry name="Action" type="attribute" inpkey="539"/>
+															<entry name="PK" ns="1" inpkey="550"/>
+															<entry name="AROnCreditHold" ns="1" inpkey="540"/>
+															<entry name="ARCreditApproved" ns="1" inpkey="541"/>
+														</entry>
+													</entry>
+													<entry name="OrgRelatedPartyCollection" ns="1">
+														<entry name="OrgRelatedParty" ns="1">
+															<entry name="Action" type="attribute" inpkey="542"/>
+															<entry name="PartyType" ns="1" inpkey="543"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\Hari\CW1 XSD\NativeOrganization.xsd" instanceroot="{http://www.cargowise.com/Schemas/Native/2011/11}Native"/>
+					</data>
+				</component>
+				<component name="db" library="db" uid="47" kind="15">
+					<view ltx="84" lty="-56" rbx="345" rby="718"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="document" ns="1" expanded="1">
+								<entry name="PUB.customer-parties" type="table" outkey="471" expanded="1">
+									<entry name="Cust-no" outkey="551"/>
+									<entry name="Consignee-ID" outkey="456"/>
+									<entry name="Notify-party1" outkey="481"/>
+									<entry name="Notify-party2" outkey="482"/>
+									<entry name="Contact" outkey="457"/>
+									<entry name="Freight-ppdcol-ind" outkey="458"/>
+									<entry name="ult-cons-type" outkey="484"/>
+									<entry name="mailing-address-type" outkey="474"/>
+								</entry>
+							</entry>
+						</root>
+						<database ref="Rashi6_-_Dev_-_Shapoper">
+							<data>
+								<selections>
+									<selection>
+										<PathElement Name="shapoper" Kind="Database"/>
+										<PathElement Name="PUB" Kind="Schema"/>
+										<PathElement Name="customer-parties" Kind="Table"/>
+									</selection>
+								</selections>
+							</data>
+						</database>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="438">
+						<edges>
+							<edge vertexkey="459"/>
+							<edge vertexkey="533"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="442">
+						<edges>
+							<edge vertexkey="460"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="440">
+						<edges>
+							<edge vertexkey="461"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="481">
+						<edges>
+							<edge vertexkey="487"/>
+							<edge vertexkey="490"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="494">
+						<edges>
+							<edge vertexkey="488"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="491">
+						<edges>
+							<edge vertexkey="492"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="485">
+						<edges>
+							<edge vertexkey="493"/>
+							<edge vertexkey="499"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="482">
+						<edges>
+							<edge vertexkey="496"/>
+							<edge vertexkey="501"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="497">
+						<edges>
+							<edge vertexkey="498"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="500">
+						<edges>
+							<edge vertexkey="502"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="458">
+						<edges>
+							<edge vertexkey="513"/>
+							<edge vertexkey="516"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="471">
+						<edges>
+							<edge vertexkey="532"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="441">
+						<edges>
+							<edge vertexkey="534"/>
+							<edge vertexkey="537"/>
+							<edge vertexkey="539"/>
+							<edge vertexkey="542"/>
+							<edge vertexkey="549"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="456">
+						<edges>
+							<edge vertexkey="535"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="474">
+						<edges>
+							<edge vertexkey="536"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="457">
+						<edges>
+							<edge vertexkey="538"/>
+							<edge vertexkey="548"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="514">
+						<edges>
+							<edge vertexkey="540"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="515">
+						<edges>
+							<edge vertexkey="541"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="484">
+						<edges>
+							<edge vertexkey="543"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="547">
+						<edges>
+							<edge vertexkey="545"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="544">
+						<edges>
+							<edge vertexkey="546"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="551">
+						<edges>
+							<edge vertexkey="550"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>
